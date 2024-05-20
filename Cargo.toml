@@ -1,0 +1,22 @@
+[package]
+name = "hnv"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+anyhow = "1.0.82"
+askama = "0.12.1"
+axum = { version = "0.7.5", features = ["http1"] }
+reqwest = { version = "0.12.4", features = ["json"] }
+tokio-rusqlite = "0.5"
+serde = "1.0.198"
+serde_json = "1.0.116"
+tokio = { version = "1.37.0", features = ["rt-multi-thread"] }
+tower = { version = "0.4",features = ["util", "timeout", "load-shed", "limit"] }
+tower-http = { version = "0.5", features = ["add-extension", "auth", "compression-full", "trace", "fs"] }
+tracing = "0.1.40"
+tracing-subscriber = "0.3.18"
+axum-macros = "0.4.1"
+pbr = "1.1.1"
